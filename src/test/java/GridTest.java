@@ -44,6 +44,18 @@ public class GridTest {
         };
         grid.insertToken("R",0);
                 assertEquals(expectedMatrix[5][0],grid.getToken(5,0));
-
+    }
+    @Test
+    public void shouldPutTokenOnTheLastLineOfAnyEmptyColumn() {
+        String[][] expectedMatrix = {
+                {".", ".", ".", ".", ".", ".", "."},
+                {".", ".", ".", ".", ".", ".", "."},
+                {".", ".", ".", ".", ".", ".", "."},
+                {".", ".", ".", ".", ".", ".", "."},
+                {".", ".", ".", ".", ".", ".", "."},
+                {".", ".", "J", ".", ".", ".", "."},
+        };
+        grid.insertToken("J",2);
+        assertEquals(expectedMatrix[5][2],grid.getToken(5,2));
     }
 }

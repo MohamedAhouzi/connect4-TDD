@@ -21,6 +21,6 @@ public class Grid {
     }
 
     public void insertToken(String token, int column) {
-         matrix[5][0] = "R";
+         matrix[5][column] = token;
     }
 }
