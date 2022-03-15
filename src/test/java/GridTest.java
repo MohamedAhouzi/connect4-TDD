@@ -13,7 +13,7 @@ public class GridTest {
     @Test
     public void shouldHave6LinesWhenInitializedGrid(){
 
-        int result = grid.getLines();
+        int result = grid.getRows();
         assertEquals(6,result);
     }
     @Test
@@ -24,7 +24,7 @@ public class GridTest {
 
     @Test
     public void gridShouldBeInitializedWithPoints(){
-       for (int i=0;i<6;i++) {
+       for (int i = 0; i<6 ;i++) {
            for (int j = 0; j < 7; j++) {
                String result = grid.getToken(i + 1, j + 1);
                assertEquals(".",result);

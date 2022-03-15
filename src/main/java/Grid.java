@@ -6,7 +6,7 @@ public class Grid {
             for (int j=0;j<7;j++)
                 matrix[i][j] = ".";
     }
-    public int getLines(){
+    public int getRows(){
         return 6;
     }
 
