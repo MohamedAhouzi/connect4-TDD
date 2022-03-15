@@ -21,6 +21,7 @@ public class Grid {
     }
 
     public void insertToken(String token, int column) {
+        if(column>7) throw new IllegalArgumentException("column should not be greater than 7");
          matrix[5][column] = token;
     }
 }
