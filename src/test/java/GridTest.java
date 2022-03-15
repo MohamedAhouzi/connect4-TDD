@@ -136,5 +136,15 @@ public class GridTest {
         }
 
     }
+    @Test
+    public void showShouldReturnVisualRepresentationOfTheGrid(){
+        String result = ". . . . . . . \n" +
+                ". . . . . . . \n" +
+                ". . . . . . . \n" +
+                ". . . . . . . \n" +
+                ". . . . . . . \n" +
+                ". . . . . . . \n";
+        assertEquals(result,grid.show());
+    }
 
 }

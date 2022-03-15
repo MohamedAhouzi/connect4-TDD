@@ -37,4 +37,15 @@ public class Grid {
             for (int j=0;j<7;j++)
                 matrix[i][j] = ".";
     }
+
+    public String show() {
+        String result="";
+        for (int i=0;i<6;i++){
+            for (int j=0;j<7;j++){
+                result+=". ";
+            }
+            result+="\n";
+        }
+            return result;
+    }
 }
