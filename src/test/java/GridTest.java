@@ -115,9 +115,26 @@ public class GridTest {
         grid.insertToken("J",3);
         grid.insertToken("J",3);
 
-
         assertThrows(RuntimeException.class,()->{
             grid.insertToken("J",3);
         });
     }
+
+    @Test
+    public void gridShouldBeEmptyWhenCallReset(){
+
+        grid.insertToken("R",1);
+        grid.insertToken("R",1);
+        grid.insertToken("R",1);
+        grid.insertToken("R",1);
+        grid.reset();
+        for (int i = 0; i<6 ;i++) {
+            for (int j = 0; j < 7; j++) {
+                String result = grid.getToken(i , j);
+                assertEquals(".",result);
+            }
+        }
+
+    }
+
 }

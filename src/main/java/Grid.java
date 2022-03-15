@@ -32,4 +32,9 @@ public class Grid {
         throw new RuntimeException("all rows are full");
 
     }
+    public void reset(){
+        for (int i=0;i<6;i++)
+            for (int j=0;j<7;j++)
+                matrix[i][j] = ".";
+    }
 }
