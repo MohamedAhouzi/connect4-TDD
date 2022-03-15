@@ -66,4 +66,21 @@ public class GridTest {
     public void shouldThrowExceptionWhenTryingToAddTokenInColumnLessThan0() {
         assertThrows(IllegalArgumentException.class,()->grid.insertToken("J",-1));
     }
+    @Test
+    public void shouldPutTokenOnThe4thRowAndThe2ndColumnWhenThe5thRowOf2ndColumnIsFull() {
+        String[][] expectedMatrix = {
+                {".", ".", ".", ".", ".", ".", "."},
+                {".", ".", ".", ".", ".", ".", "."},
+                {".", ".", ".", ".", ".", ".", "."},
+                {".", ".", ".", ".", ".", ".", "."},
+                {".", ".", "J", ".", ".", ".", "."},
+                {".", ".", "J", ".", ".", ".", "."},
+        };
+
+        grid.insertToken("J",2);
+        grid.insertToken("J",2);
+
+        assertEquals(expectedMatrix[4][2],grid.getToken(4,2));
+
+    }
 }
