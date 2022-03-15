@@ -20,7 +20,7 @@ public class Grid {
         return matrix[row][column];
     }
 
-    public void insertToken(String token, int column) {
+    public void insertToken(String token, int column)  {
         if(column>6) throw new IllegalArgumentException("column should not be greater than 6");
         if(column<0) throw new IllegalArgumentException("column should not be less than 0");
         for(int i=5;i>=0;i--) {
@@ -29,6 +29,7 @@ public class Grid {
                 return;
             }
         }
+        throw new RuntimeException("all rows are full");
 
     }
 }

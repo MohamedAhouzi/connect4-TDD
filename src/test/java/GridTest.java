@@ -98,4 +98,26 @@ public class GridTest {
         assertEquals(expectedMatrix[4][3],grid.getToken(3,3));
 
     }
+    @Test
+    public void shouldThrowExceptionWhenColumnIsFull()  {
+        String[][] expectedMatrix = {
+                {".", ".", ".", "J", ".", ".", "."},
+                {".", ".", ".", "J", ".", ".", "."},
+                {".", ".", ".", "J", ".", ".", "."},
+                {".", ".", ".", "J", ".", ".", "."},
+                {".", ".", ".", "J", ".", ".", "."},
+                {".", ".", ".", "J", ".", ".", "."},
+        };
+        grid.insertToken("J",3);
+        grid.insertToken("J",3);
+        grid.insertToken("J",3);
+        grid.insertToken("J",3);
+        grid.insertToken("J",3);
+        grid.insertToken("J",3);
+
+
+        assertThrows(RuntimeException.class,()->{
+            grid.insertToken("J",3);
+        });
+    }
 }
