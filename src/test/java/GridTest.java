@@ -59,7 +59,11 @@ public class GridTest {
         assertEquals(expectedMatrix[5][2],grid.getToken(5,2));
     }
     @Test()
-    public void shouldThrowExceptionWhenTryingToAddTokenInColumnGreaterThan7() {
+    public void shouldThrowExceptionWhenTryingToAddTokenInColumnGreaterThan6() {
         assertThrows(IllegalArgumentException.class,()->grid.insertToken("J",8));
+    }
+    @Test()
+    public void shouldThrowExceptionWhenTryingToAddTokenInColumnLessThan0() {
+        assertThrows(IllegalArgumentException.class,()->grid.insertToken("J",-1));
     }
 }
