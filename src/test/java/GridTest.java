@@ -26,10 +26,24 @@ public class GridTest {
     public void gridShouldBeInitializedWithPoints(){
        for (int i = 0; i<6 ;i++) {
            for (int j = 0; j < 7; j++) {
-               String result = grid.getToken(i + 1, j + 1);
+               String result = grid.getToken(i , j);
                assertEquals(".",result);
            }
        }
+
+    }
+    @Test
+    public void shouldPutTokenOnTheLastLineOfEmptyColumn1() {
+        String[][] expectedMatrix = {
+                {".", ".", ".", ".", ".", ".", "."},
+                {".", ".", ".", ".", ".", ".", "."},
+                {".", ".", ".", ".", ".", ".", "."},
+                {".", ".", ".", ".", ".", ".", "."},
+                {".", ".", ".", ".", ".", ".", "."},
+                {"R", ".", ".", ".", ".", ".", "."},
+        };
+        grid.insertToken("R",0);
+                assertEquals(expectedMatrix[5][0],grid.getToken(5,0));
 
     }
 }

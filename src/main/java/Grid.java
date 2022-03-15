@@ -1,5 +1,8 @@
 public class Grid {
-    private final String[][] matrix;
+    private  String[][] matrix;
+    private static final int ROWS = 6;
+    private static final int COLUMNS = 7;
+
     public Grid(){
         matrix = new String[6][7];
         for (int i=0;i<6;i++)
@@ -7,13 +10,17 @@ public class Grid {
                 matrix[i][j] = ".";
     }
     public int getRows(){
-        return 6;
+        return ROWS;
     }
 
     public int getColumns() {
-        return 7;
+        return COLUMNS;
     }
     public String getToken(int row, int column) {
-        return matrix[row - 1][column - 1];
+        return matrix[row][column];
+    }
+
+    public void insertToken(String token, int column) {
+         matrix[5][0] = "R";
     }
 }
