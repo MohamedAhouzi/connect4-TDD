@@ -79,8 +79,23 @@ public class GridTest {
 
         grid.insertToken("J",2);
         grid.insertToken("J",2);
-
         assertEquals(expectedMatrix[4][2],grid.getToken(4,2));
+
+    }
+    @Test
+    public void shouldPutTokenOnTopOfExistingTokensInAColumn() {
+        String[][] expectedMatrix = {
+                {".", ".", ".", ".", ".", ".", "."},
+                {".", ".", ".", ".", ".", ".", "."},
+                {".", ".", ".", ".", ".", ".", "."},
+                {".", ".", ".", "J", ".", ".", "."},
+                {".", ".", ".", "J", ".", ".", "."},
+                {".", ".", ".", "J", ".", ".", "."},
+        };
+        grid.insertToken("J",3);
+        grid.insertToken("J",3);
+        grid.insertToken("J",3);
+        assertEquals(expectedMatrix[4][3],grid.getToken(3,3));
 
     }
 }

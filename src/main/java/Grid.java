@@ -23,10 +23,12 @@ public class Grid {
     public void insertToken(String token, int column) {
         if(column>6) throw new IllegalArgumentException("column should not be greater than 6");
         if(column<0) throw new IllegalArgumentException("column should not be less than 0");
-        if(!matrix[5][column].equals(".")){
-            matrix[4][column] = token;
+        for(int i=5;i>=0;i--) {
+            if (matrix[i][column].equals(".")) {
+                matrix[i][column] = token;
+                return;
+            }
         }
-        else matrix[5][column]=token;
 
     }
 }
