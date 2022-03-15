@@ -3,4 +3,8 @@ public class Grid {
     public int getLines(){
         return 6;
     }
+
+    public int getColumns() {
+        return 7;
+    }
 }

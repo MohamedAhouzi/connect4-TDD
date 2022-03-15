@@ -8,4 +8,10 @@ public class GridTest {
         int result = grid.getLines();
         Assertions.assertEquals(6,result);
     }
+    @Test
+    public void shouldHave7ColumnsWhenInitializedGrid(){
+        Grid grid = new Grid();
+        int result = grid.getColumns();
+        Assertions.assertEquals(7,result);
+    }
 }
