@@ -9,11 +9,11 @@ public class Grid {
             for (int j=0;j<7;j++)
                 matrix[i][j] = ".";
     }
-    public int getRows(){
+    public int getNumbersOfRows(){
         return ROWS;
     }
 
-    public int getColumns() {
+    public int getNumbersOfColumns() {
         return COLUMNS;
     }
     public String getToken(int row, int column) {
@@ -48,4 +48,6 @@ public class Grid {
         }
             return result;
     }
+
+
 }

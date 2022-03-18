@@ -12,12 +12,12 @@ public class GridTest {
     @Test
     public void shouldHave6LinesWhenInitializedGrid(){
 
-        int result = grid.getRows();
+        int result = grid.getNumbersOfRows();
         assertEquals(6,result);
     }
     @Test
     public void shouldHave7ColumnsWhenInitializedGrid(){
-        int result = grid.getColumns();
+        int result = grid.getNumbersOfColumns();
         assertEquals(7,result);
     }
 
