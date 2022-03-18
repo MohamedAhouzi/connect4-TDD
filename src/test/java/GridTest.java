@@ -1,4 +1,3 @@
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -137,13 +136,25 @@ public class GridTest {
 
     }
     @Test
-    public void showShouldReturnVisualRepresentationOfTheGrid(){
+    public void showShouldReturnBasicVisualRepresentationOfTheGrid(){
         String result = ". . . . . . . \n" +
                 ". . . . . . . \n" +
                 ". . . . . . . \n" +
                 ". . . . . . . \n" +
                 ". . . . . . . \n" +
                 ". . . . . . . \n";
+        assertEquals(result,grid.show());
+    }
+
+    @Test
+    public void showShouldReturnVisualRepresentationOfTheGrid(){
+        String result = ". . . . . . . \n" +
+                ". . . . . . . \n" +
+                ". . . . . . . \n" +
+                ". . . . . . . \n" +
+                ". . . . . . . \n" +
+                "R . . . . . . \n";
+        grid.insertToken("R",0);
         assertEquals(result,grid.show());
     }
 
